@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.skiptranslate > span {
+  display: none;
+}
+.skiptranslate > iframe {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.goog-te-gadget > div > .goog-te-combo:nth-child(2) {
+  background: red;
+  display: none;
+}
+.goog-te-gadget > div > .goog-te-combo:nth-child(1) {
+  border: 1px solid rgb(234, 224, 224);
+  padding: 5px;
+  border-radius: 6px;
+}
+/* .goog-te-gadget > span:nth-child(1) {
+  border: 1px solid red;
+} */
+
+#google_translate_element .goog-te-gadget:nth-child(3) {
+  background: red;
+  display: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.header {
+  position: relative;
+}
+.goog-te-combo {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

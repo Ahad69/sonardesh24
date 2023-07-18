@@ -1,0 +1,23 @@
+.navbar {
+  width: 1208px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-size: 17px;
+}
+.navbar > li {
+  list-style: none;
+  cursor: pointer;
+}
+.navbar > li:hover {
+  list-style: none;
+  border-bottom: 5px solid red;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}

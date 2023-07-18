@@ -1,0 +1,14 @@
+.container {
+  width: 1208px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
