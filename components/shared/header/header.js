@@ -7,7 +7,7 @@ import { AiOutlineMenuUnfold } from "react-icons/ai";
 
 const Header = ({ open, setOpen }) => {
   return (
-    <div className={`${style.container} header`}>
+    <div className={`${style.container}`}>
       <div className="hidden sm:block">
         <BanglaDate />
       </div>
@@ -20,7 +20,7 @@ const Header = ({ open, setOpen }) => {
           <img className="w-44 sm:w-64 mt-2" src="/logo.png" />
         </Link>
       </div>
-      <div className="text-end">
+      <div className="text-end header">
         <DatePickers />
         <div className="block sm:hidden">
           <BanglaDate />

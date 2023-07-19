@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
     const script = document.createElement("script");
     script.innerHTML = `
           function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'bn' }, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
           }
         `;
 

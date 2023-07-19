@@ -1,0 +1,15 @@
+.container {
+  width: 1200px;
+  margin: auto;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}

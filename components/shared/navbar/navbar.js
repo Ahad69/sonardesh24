@@ -3,7 +3,7 @@ import style from "./navbar.module.css";
 
 const Navbar = () => {
   return (
-    <div className="bg-gray-100 w-full shadow-md shadow-green-500/50 sticky top-0">
+    <div className="bg-gray-100 w-full shadow-md shadow-green-500/50 sticky top-0 z-50">
       <nav className={style.navbar}>
         <li> সর্বশেষ</li>
         <li> জাতীয়</li>

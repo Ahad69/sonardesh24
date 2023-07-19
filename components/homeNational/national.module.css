@@ -1,0 +1,20 @@
+.container {
+  width: 1200px;
+  margin: auto;
+}
+.leftContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.right {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin-left: auto;
+}
