@@ -1,19 +1,12 @@
 import React from "react";
-import Smaller from "../news/ui/smaller";
+import style from "./top.module.css";
 import International from "../news/categoryUi/international";
-import style from "./international.module.css";
-import Small from "../news/ui/small/small";
+import Smaller from "../news/ui/smaller";
 import NationalLeft from "../news/categoryUi/national";
 
-const InternationalSection = ({ news }) => {
+const CategoryTop = ({ news }) => {
   return (
     <div className={style.container}>
-      <div className="flex justify-between items-center">
-        <h1 className="font-bold text-white text-2xl bg-green-500 p-2 w-[160px] text-center capitalize">
-          আন্তর্জাতিক
-        </h1>
-        <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
-      </div>
       <div className={style.containers}>
         <div>
           <div className="flex">
@@ -44,4 +37,4 @@ const InternationalSection = ({ news }) => {
   );
 };
 
-export default InternationalSection;
+export default CategoryTop;

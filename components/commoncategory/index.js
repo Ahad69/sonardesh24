@@ -9,7 +9,7 @@ const CommonCategorySection = ({ news }) => {
     <div className={style.container}>
       <div>
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[100px]">
+          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[100px] text-center capitalize">
             রাজনীতি
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
@@ -30,7 +30,7 @@ const CommonCategorySection = ({ news }) => {
 
       <div>
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[120px]">
+          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[120px] text-center capitalize">
             অর্থনৈতিক
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
@@ -53,7 +53,7 @@ const CommonCategorySection = ({ news }) => {
         <br />
         <br />
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[160px]">
+          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[160px] text-center capitalize">
             আইন আদালত
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
@@ -76,7 +76,7 @@ const CommonCategorySection = ({ news }) => {
         <br />
         <br />
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[130px]">
+          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[130px] text-center capitalize">
             তথ্য প্রযুক্তি
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>

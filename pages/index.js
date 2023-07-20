@@ -8,6 +8,9 @@ import HomeNationalSection from "@/components/homeNational";
 import InternationalSection from "@/components/international";
 import CommonCategorySection from "@/components/commoncategory";
 import Education from "@/components/education";
+import Sports from "@/components/sports";
+import LineCategory from "@/components/commoncategory/lineCategory";
+import Entertainment from "@/components/entertainment";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +24,6 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setData(data.articles));
   }, []);
-
-  console.log(data);
 
   return (
     <>
@@ -58,11 +59,29 @@ export default function Home() {
           <hr />
           <br />
           <br />
+          <Sports news={data?.slice(65, 77)} />
+          <br />
+          <br />
+          <hr />
+          <br />
+          <br />
           <Education news={data?.slice(58, 64)} />
 
           <br />
           <br />
           <hr />
+          <br />
+          <br />
+          <LineCategory news={data?.slice(77, 90)} />
+          <br />
+          <br />
+          <hr />
+          <br />
+          <br />
+          <Entertainment news={data?.slice(90, 97)} />
+          <br />
+          <br />
+
           <br />
           <br />
         </div>

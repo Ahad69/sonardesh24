@@ -8,7 +8,7 @@ const Education = ({ news }) => {
   return (
     <div className={style.container}>
       <div className="flex justify-between items-center">
-        <h1 className="font-bold text-white text-2xl bg-green-500 p-2 w-[120px]">
+        <h1 className="font-bold text-white text-2xl bg-green-500 p-2 w-[130px]  text-center capitalize">
           শিক্ষা
         </h1>
         <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
