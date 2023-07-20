@@ -10,19 +10,19 @@ const CategoryTop = ({ news }) => {
       <div className={style.containers}>
         <div>
           <div className="flex">
-            <International news={news[0]} />
+            <International news={news?.[0]} />
 
             <div className="ml-2 flex flex-col justify-between gap-1">
-              <Smaller news={news[1]} />
-              <Smaller news={news[2]} />
-              <Smaller news={news[3]} />
-              <Smaller news={news[4]} />
+              <Smaller news={news?.[1]} />
+              <Smaller news={news?.[2]} />
+              <Smaller news={news?.[3]} />
+              <Smaller news={news?.[4]} />
             </div>
           </div>
           <div className="flex gap-2 mt-4">
-            <NationalLeft news={news[6]} />
-            <NationalLeft news={news[7]} />
-            <NationalLeft news={news[8]} />
+            <NationalLeft news={news?.[6]} />
+            <NationalLeft news={news?.[7]} />
+            <NationalLeft news={news?.[8]} />
           </div>
         </div>
 

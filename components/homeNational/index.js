@@ -15,20 +15,20 @@ const HomeNationalSection = ({ news }) => {
 
       <div className={style.leftContainer}>
         <div className={style.left}>
-          <NationalLeft news={news[0]} />
-          <NationalLeft news={news[1]} />
-          <NationalLeft news={news[2]} />
-          <NationalLeft news={news[3]} />
+          <NationalLeft news={news?.[0]} />
+          <NationalLeft news={news?.[1]} />
+          <NationalLeft news={news?.[2]} />
+          <NationalLeft news={news?.[3]} />
         </div>
         <div className={style.right}>
-          <NationalRight news={news[4]} />
-          <NationalRight news={news[5]} />
-          <NationalRight news={news[6]} />
-          <NationalRight news={news[7]} />
-          <NationalRight news={news[8]} />
-          <NationalRight news={news[9]} />
-          <NationalRight news={news[10]} />
-          <NationalRight news={news[11]} />
+          <NationalRight news={news?.[4]} />
+          <NationalRight news={news?.[5]} />
+          <NationalRight news={news?.[6]} />
+          <NationalRight news={news?.[7]} />
+          <NationalRight news={news?.[8]} />
+          <NationalRight news={news?.[9]} />
+          <NationalRight news={news?.[10]} />
+          <NationalRight news={news?.[11]} />
         </div>
       </div>
     </div>

@@ -15,12 +15,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news[0]} />
+          <SingleNews news={news?.[0]} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news[2]} />
-            <Smaller news={news[1]} />
-            <Smaller news={news[3]} />
-            <Smaller news={news[4]} />
+            <Smaller news={news?.[2]} />
+            <Smaller news={news?.[1]} />
+            <Smaller news={news?.[3]} />
+            <Smaller news={news?.[4]} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
@@ -36,12 +36,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news[6]} />
+          <SingleNews news={news?.[6]} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news[7]} />
-            <Smaller news={news[8]} />
-            <Smaller news={news[9]} />
-            <Smaller news={news[10]} />
+            <Smaller news={news?.[7]} />
+            <Smaller news={news?.[8]} />
+            <Smaller news={news?.[9]} />
+            <Smaller news={news?.[10]} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
@@ -59,12 +59,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news[11]} />
+          <SingleNews news={news?.[11]} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news[12]} />
-            <Smaller news={news[13]} />
-            <Smaller news={news[14]} />
-            <Smaller news={news[15]} />
+            <Smaller news={news?.[12]} />
+            <Smaller news={news?.[13]} />
+            <Smaller news={news?.[14]} />
+            <Smaller news={news?.[15]} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
@@ -82,12 +82,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news[16]} />
+          <SingleNews news={news?.[16]} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news[17]} />
-            <Smaller news={news[18]} />
-            <Smaller news={news[19]} />
-            <Smaller news={news[20]} />
+            <Smaller news={news?.[17]} />
+            <Smaller news={news?.[18]} />
+            <Smaller news={news?.[19]} />
+            <Smaller news={news?.[20]} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
