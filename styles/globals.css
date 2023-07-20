@@ -18,17 +18,20 @@
   padding: 5px;
   border-radius: 6px;
 }
-/* .goog-te-gadget > span:nth-child(1) {
-  border: 1px solid red;
-} */
 
 #google_translate_element .goog-te-gadget:nth-child(3) {
   background: red;
   display: none;
 }
 
-.goog-te-combo {
+.goog-te-gadget {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: visible;
+}
+.goog-te-combo {
+  position: fixed;
   top: 0;
   right: 0;
 }
