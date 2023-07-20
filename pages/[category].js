@@ -9,30 +9,40 @@ import NewsList from "@/components/newsList";
 const Category = () => {
   const router = useRouter();
   const [data, setData] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setLoading(true);
     fetch(
       "https://newsapi.org/v2/everything?q=tesla&from&sortBy=publishedAt&apiKey=fcca02606cb2467c8c1ec72c5f168d1e"
     )
       .then((res) => res.json())
-      .then((data) => setData(data.articles));
+      .then((data) => {
+        setLoading(true);
+        setData(data.articles);
+      });
   }, []);
 
   return (
     <Layout>
-      <CategoryTop news={data?.slice(0, 9)} />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <MostRead news={data?.slice(11, 20)} />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <NewsList news={data?.slice(0, 20)} />
+      {loading ? (
+        "loading"
+      ) : (
+        <>
+          <CategoryTop news={data?.slice(0, 9)} />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <MostRead news={data?.slice(11, 20)} />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <NewsList news={data?.slice(0, 20)} />{" "}
+        </>
+      )}
     </Layout>
   );
 };
