@@ -1,17 +1,48 @@
 import Link from "next/link";
 import React from "react";
+import { GrFacebook, GrPinterest, GrTwitter } from "react-icons/gr";
+import { BsLinkedin, BsReddit } from "react-icons/bs";
+import { FaDigg } from "react-icons/fa";
 
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <div>
+    <div className="bg-gray-100">
       <div className="flex justify-center items-center">
         <Link href={"/"}>
           <img className="w-44 sm:w-64 mt-2" src="/logo.png" />
         </Link>
       </div>
+      <footer className="flex justify-between items-center p-10  text-black w-[1200px] m-auto gap-10">
+        <div className="text-center w-6/12">
+          <p>
+            সম্পাদক ও প্রকাশকঃ জিয়াউল হক
+            <br />
+            নির্বাহী সম্পাদকঃ মোস্তাক আহম্মেদ নওশাদ
+          </p>
+        </div>
+        <div className="text-center  w-6/12">
+          যোগাযোগ- মুজিব সড়ক, কমিউনিটি হাসপাতাল ৫ তলা, সিরাজগঞ্জ
+          <br />
+          ইমেইল- admin@sonardesh24.com
+          <br />
+          মোবাইল : 01324 977 175, 01716-076444
+        </div>
+      </footer>
       <footer className="footer footer-center p-4 bg-gray-100 text-base-content">
         <div>
+          <div className=" flex justify-around items-center w-full m-auto mt-4">
+            <GrFacebook className="text-3xl text-white bg-blue-600 hover:text-blue-500 hover:bg-white cursor-pointer border" />
+
+            <GrTwitter className="text-3xl  cursor-pointer bg-cyan-400 text-white border hover:text-cyan-400 hover:bg-white p-1 " />
+            <BsLinkedin className="text-3xl text-white bg-blue-600 hover:text-blue-500 hover:bg-white cursor-pointer border" />
+
+            <BsReddit className="text-3xl text-white bg-red-500 hover:text-red-500 hover:bg-white cursor-pointer border rounded-full" />
+
+            <FaDigg className="text-3xl text-white bg-blue-600 hover:text-blue-500 hover:bg-white cursor-pointer border px-1" />
+
+            <GrPinterest className="text-3xl text-white bg-red-500 hover:text-red-500 hover:bg-white cursor-pointer border rounded-full" />
+          </div>
           <p>Copyright © {date} - All right reserved by Sonar Desh 24 Ltd</p>
         </div>
       </footer>
