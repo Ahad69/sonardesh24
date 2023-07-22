@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import "@/styles/fonts.css";
+
 import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
@@ -23,7 +25,7 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
   return (
-    <div id="google_translate_element">
+    <div className="body" id="google_translate_element">
       <Component {...pageProps} />
     </div>
   );

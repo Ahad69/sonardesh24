@@ -1,0 +1,5 @@
+/* styles/fonts.css */
+@font-face {
+  font-family: "Adorsho Lipi";
+  src: url("/font/AdorshoLipi.ttf") format("truetype");
+}

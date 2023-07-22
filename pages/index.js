@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
     fetch(
-      "https://newsapi.org/v2/everything?q=&from&sortBy=publishedAt&apiKey=fcca02606cb2467c8c1ec72c5f168d1e"
+      "https://newsapi.org/v2/everything?q=tesla&from=2023-07-20&sortBy=publishedAt&apiKey=fcca02606cb2467c8c1ec72c5f168d1e"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -29,6 +29,8 @@ export default function Home() {
         setLoading(false);
       });
   }, []);
+
+  console.log(data);
 
   return (
     <>

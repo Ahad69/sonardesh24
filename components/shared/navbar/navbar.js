@@ -8,54 +8,54 @@ const Navbar = () => {
       <nav className={style.navbar}>
         <li>
           {" "}
-          <Link href={"/latest"}>সর্বশেষ</Link>{" "}
+          <Link href={"/সর্বশেষ"}>সর্বশেষ</Link>{" "}
         </li>
         <li>
-          <Link href={"/national"}>জাতীয়</Link>{" "}
-        </li>
-        <li>
-          {" "}
-          <Link href={"/international"}>আন্তর্জাতিক</Link>{" "}
+          <Link href={"/জাতীয়"}>জাতীয়</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/politics"}>রাজনীতি</Link>{" "}
+          <Link href={"/আন্তর্জাতিক"}>আন্তর্জাতিক</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/economics"}>অর্থনীতি</Link>{" "}
+          <Link href={"/রাজনীতি"}>রাজনীতি</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/laws"}>আইন আদালত</Link>{" "}
+          <Link href={"/অর্থনীতি"}>অর্থনীতি</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/information-technology"}>তথ্য প্রযুক্তি</Link>{" "}
+          <Link href={"/আইন আদালত"}>আইন আদালত</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/education"}>শিক্ষা</Link>{" "}
+          <Link href={"/তথ্য প্রযুক্তি"}>তথ্য প্রযুক্তি</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/entertainment"}>বিনোদন</Link>
+          <Link href={"/শিক্ষা"}>শিক্ষা</Link>{" "}
         </li>
         <li>
           {" "}
-          <Link href={"/life-style"}>লাইফস্টাইল</Link>
+          <Link href={"/বিনোদন"}>বিনোদন</Link>
         </li>
         <li>
           {" "}
-          <Link href={"/sports"}>খেলাধুলা</Link>
+          <Link href={"/লাইফস্টাইল"}>লাইফস্টাইল</Link>
         </li>
         <li>
           {" "}
-          <Link href={"/job"}>চাকরি</Link>{" "}
+          <Link href={"/খেলাধুলা"}>খেলাধুলা</Link>
         </li>
         <li>
           {" "}
-          <Link href={"/horoscope"}>রাশিফল</Link>
+          <Link href={"/চাকরি"}>চাকরি</Link>{" "}
+        </li>
+        <li>
+          {" "}
+          <Link href={"/রাশিফল"}>রাশিফল</Link>
         </li>
       </nav>
     </div>
