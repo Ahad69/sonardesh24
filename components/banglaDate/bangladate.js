@@ -19,7 +19,7 @@ const BanglaDates = () => {
     console.log(day, month, year);
   };
 
-  getBengaliDate();
+  // getBengaliDate();
 
   return (
     <div>

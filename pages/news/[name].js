@@ -7,6 +7,7 @@ import { ImEye } from "react-icons/im";
 import { GrFacebook, GrPinterest, GrTwitter } from "react-icons/gr";
 import { BsLinkedin, BsReddit } from "react-icons/bs";
 import { FaDigg } from "react-icons/fa";
+import Dynamicdate from "@/components/banglaDate/dynamicdate";
 
 const Details = () => {
   const [data, setData] = useState([]);
@@ -41,8 +42,8 @@ const Details = () => {
               <h1 className="text-md">সোনারদেশ ২৪ ডেস্ক</h1>
               <hr />
               <p className="flex items-center text-sm">
-                আপডেট করা হয়েছে মঙ্গলবার, ২৭ জুন, ২০২৩ /{" "}
-                <ImEye className="mx-2" /> ১৯ বার পড়া হয়েছে
+                আপডেট করা হয়েছে - <Dynamicdate /> / <ImEye className="mx-2" />{" "}
+                ১৯ বার পড়া হয়েছে
               </p>
             </div>
           </div>
