@@ -30,7 +30,8 @@ const SubCategory = () => {
           <br />
           <div className="flex items-center justify-between w-[1200px] m-auto">
             <li className="list-none text-2xl hover:text-blue-400 flex items-center">
-              {router.query.category[0]} <IoIosArrowForward />{" "}
+              {router.query.category[0]}
+              <IoIosArrowForward />
               {router.query.category[1]}
             </li>
           </div>

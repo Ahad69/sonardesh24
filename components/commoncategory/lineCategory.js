@@ -8,7 +8,7 @@ const LineCategory = ({ news }) => {
     <div className={style.lineContainer}>
       <div>
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[130px]  text-center capitalize">
+          <h1 className="text-white text-2xl bg-green-600 p-2 w-[130px]  text-center capitalize">
             লাইফস্টাইল
           </h1>
           <h1 className="font-bold text-blue-400 text-md mr-6">সকল খবর </h1>
@@ -20,7 +20,7 @@ const LineCategory = ({ news }) => {
       </div>
       <div>
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[130px]  text-center capitalize">
+          <h1 className=" text-white text-2xl bg-green-600 p-2 w-[130px]  text-center capitalize">
             চাকরি
           </h1>
           <h1 className="font-bold text-blue-400 text-md mr-6">সকল খবর </h1>
@@ -32,7 +32,7 @@ const LineCategory = ({ news }) => {
       </div>
       <div>
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-white text-xl bg-green-500 p-2 w-[130px]  text-center capitalize">
+          <h1 className=" text-white text-2xl bg-green-600 p-2 w-[130px]  text-center capitalize">
             রাশিফল
           </h1>
           <h1 className="font-bold text-blue-400 text-md mr-6">সকল খবর </h1>
