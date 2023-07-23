@@ -5,8 +5,8 @@ const NationalRight = ({ news }) => {
     <div className="w-[270px] h-[100px] border border-gray-200 p-2 overflow-hidden">
       <h1 className="font-bold text-lg  cursor-pointer">{news?.title}</h1>
       {/* <p className="text-xl">
-        {news?.content?.slice(0, 170)}
-        {news?.content?.length > 170 ? <button>...Read More</button> : ""}
+        {news?.description?.slice(0, 170)}
+        {news?.description?.length > 170 ? <button>...Read More</button> : ""}
       </p> */}
     </div>
   );

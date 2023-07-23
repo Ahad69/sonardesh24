@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SportsSmall = ({ news }) => {
@@ -6,7 +7,12 @@ const SportsSmall = ({ news }) => {
       <h1 className="font-bold text-lg w-[170px]  cursor-pointer">
         {news?.title.slice(0, 60)}
       </h1>
-      <img className="w-[150px]  h-[130px]" src={news?.urlToImage} />
+      <Image
+        width={150}
+        height={130}
+        className="w-[150px]  h-[130px]"
+        src={news?.image}
+      />
     </div>
   );
 };

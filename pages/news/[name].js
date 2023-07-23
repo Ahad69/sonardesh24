@@ -48,7 +48,7 @@ const Details = () => {
             </div>
           </div>
           <br />
-          <img className="w-full h-[450px]" src={data.urlToImage} alt="a" />
+          <img className="w-full h-[450px]" src={data.image} alt="a" />
           <br />
           <h1 className="text-xl font-bold"> সোনারদেশ২৪: ডেস্কঃ </h1>
           <br />

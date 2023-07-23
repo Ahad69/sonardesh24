@@ -7,8 +7,8 @@ const SingleNewsWithoutImage = ({ news }) => {
         {news?.title?.slice(0, 50)}
       </h1>
       <p className="text-lg">
-        {news?.content?.slice(0, 200)}
-        {news?.content?.length > 170 ? <button>...Read More</button> : ""}
+        {news?.description?.slice(0, 200)}
+        {news?.description?.length > 170 ? <button>...Read More</button> : ""}
       </p>
     </div>
   );
