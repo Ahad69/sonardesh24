@@ -12,9 +12,12 @@ const NewsListWedge = ({ news }) => {
           src={news.image}
         />
       </div>
-      <div className="w-[650px] h-[250px] mx-5 overflow-truncate">
+      <div className="w-[650px] h-[250px] mx-5">
         <h1 className="text-xl font-bold">{news?.title.slice(0, 100)}</h1>
-        <h1>{news?.description}</h1>
+        <h1 className="">
+          {news?.description.slice(0, 550)}{" "}
+          {news?.description?.length > 550 ? <b>... বিস্তারিত পড়ুন</b> : ""}
+        </h1>
       </div>
     </div>
   );

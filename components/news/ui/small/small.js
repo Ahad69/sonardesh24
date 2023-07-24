@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Small = ({ news }) => {
@@ -10,10 +11,12 @@ const Small = ({ news }) => {
         alt=""
         className="w-full h-[150px]"
         src={news?.image}
-      />
-      <h1 className="font-bold text-md  cursor-pointer">
-        {news?.title.slice(0, 40)}
-      </h1>
+      />{" "}
+      <Link href={`/news/${news?.permalink}`}>
+        <h1 className="font-bold text-md  cursor-pointer">
+          {news?.title.slice(0, 40)}
+        </h1>{" "}
+      </Link>
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const EducationWedge = ({ news }) => {
+  console.log(news);
   return (
     <div className="relative w-[600px] h-[440px]">
       <Image
@@ -10,9 +12,11 @@ const EducationWedge = ({ news }) => {
         className="w-full h-full border p-2"
         src={news?.image}
       />
-      <h1 className="text-center text-white text-xl w-full font-bold  absolute bottom-5">
-        {news?.title}
-      </h1>
+      <Link href={`/news/${news?.permalink}`}>
+        <h1 className="text-center text-white text-xl w-full font-bold  absolute bottom-5">
+          {news?.title}
+        </h1>{" "}
+      </Link>
     </div>
   );
 };

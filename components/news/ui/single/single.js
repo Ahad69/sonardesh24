@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const SingleNews = ({ news }) => {
@@ -10,13 +11,15 @@ const SingleNews = ({ news }) => {
         className="w-full h-[150px]"
         src={news?.image}
       />
-      <h1 className="font-bold text-xl  cursor-pointer">
-        {news?.title.slice(0, 100)}
-      </h1>
-      <p className="text-lg">
-        {news?.description?.slice(0, 170)}
-        {news?.description?.length > 170 ? <button>...Read More</button> : ""}
-      </p>
+      <Link href={`/news/${news?.permalink}`}>
+        <h1 className="font-bold text-xl  cursor-pointer">
+          {news?.title.slice(0, 100)}
+        </h1>
+        <p className="text-lg">
+          {news?.description?.slice(0, 170)}
+          {news?.description?.length > 170 ? <button>...Read More</button> : ""}
+        </p>
+      </Link>
     </div>
   );
 };

@@ -78,14 +78,24 @@ export default function Home({ data }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("http://localhost:5000/api/v1/news/");
+// export async function getStaticProps() {
+//   const res = await fetch("http://localhost:5000/api/v1/news/");
+//   const result = await res.json();
+
+//   return {
+//     props: {
+//       data: result.data,
+//     },
+//     revalidate: 600,
+//   };
+// }
+export const getServerSideProps = async () => {
+  const res = await fetch(`http://localhost:5000/api/v1/news/`);
   const result = await res.json();
 
   return {
     props: {
       data: result.data,
     },
-    revalidate: 600,
   };
-}
+};

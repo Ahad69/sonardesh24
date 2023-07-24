@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className={style.navbar}>
         <li>
           {" "}
-          <Link href={"/সর্বশেষ"}>সর্বশেষ</Link>{" "}
+          <Link href={"/"}>সর্বশেষ</Link>{" "}
         </li>
         <li>
           <Link href={"/জাতীয়"}>জাতীয়</Link>{" "}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Smaller = ({ news }) => {
@@ -10,9 +11,11 @@ const Smaller = ({ news }) => {
         className="w-[120px] h-[70px]"
         src={news?.image}
       />
-      <h1 className=" text-md  font-bold ml-1  w-[150px]">
-        {news?.title?.slice(0, 40)}
-      </h1>
+      <Link href={`/news/${news?.permalink}`}>
+        <h1 className=" text-md  font-bold ml-1  w-[150px]">
+          {news?.title?.slice(0, 40)}
+        </h1>
+      </Link>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const LineCategoryWedge = ({ news }) => {
@@ -11,13 +12,19 @@ const LineCategoryWedge = ({ news }) => {
           className="w-full h-[250px]"
           src={news?.image}
         />
-        <h1 className="font-bold text-xl p-1 cursor-pointer">
-          {news?.title.slice(0, 60)}
-        </h1>
-        <p className="text-lg p-1">
-          {news?.description?.slice(0, 50)}
-          {news?.description?.length > 50 ? <button>...Read More</button> : ""}
-        </p>
+        <Link href={`/news/${news?.permalink}`}>
+          <h1 className="font-bold text-xl p-1 cursor-pointer">
+            {news?.title.slice(0, 60)}
+          </h1>
+          <p className="text-lg p-1">
+            {news?.description?.slice(0, 50)}
+            {news?.description?.length > 50 ? (
+              <button>...Read More</button>
+            ) : (
+              ""
+            )}
+          </p>
+        </Link>
       </div>
     </div>
   );
