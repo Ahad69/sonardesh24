@@ -9,6 +9,7 @@ const Search = ({ result }) => {
   const router = useRouter();
 
   const onChange = (page) => {
+    router.push(`/search/${router.query.search}?page=${page}`);
     console.log(page);
   };
 
@@ -35,10 +36,10 @@ const Search = ({ result }) => {
 export default Search;
 
 export const getServerSideProps = async (context) => {
-  const { params } = context;
+  const { query } = context;
 
   const res = await fetch(
-    `http://localhost:5000/api/v1/news?searchText=${params.search}&limit=10`
+    `http://localhost:5000/api/v1/news?searchText=${query.search}&limit=10&page=${query.page}`
   );
   const result = await res.json();
 

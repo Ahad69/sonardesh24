@@ -12,9 +12,9 @@ const DatePickers = () => {
     const formattedDate = formatDateToDesiredFormat(inputDate);
 
     if (date == null) {
-      router.push(`/date/${formattedDate}`);
+      router.push(`/date/${formattedDate}?page=1`);
     } else {
-      router.push(`/date/${dateString}`);
+      router.push(`/date/${dateString}?page=1`);
     }
   };
   return (
