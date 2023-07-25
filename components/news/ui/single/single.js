@@ -4,11 +4,11 @@ import React from "react";
 
 const SingleNews = ({ news }) => {
   return (
-    <div className="w-[270px] h-[440px] border border-gray-200 p-2 overflow-hidden">
+    <div className="sm:w-[270px] w-full h-[440px] border border-gray-200 p-2 overflow-hidden  mt-5 sm:m-0">
       <Image
         width={270}
         height={150}
-        className="w-full h-[150px]"
+        className="w-full sm:h-[150px] h-[200px]"
         src={news?.image}
       />
       <Link href={`/news/${news?.permalink}`}>

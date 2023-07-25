@@ -3,8 +3,8 @@ import { format } from "date-fns";
 import { bn } from "date-fns/locale";
 import bnYears from "../../public/year.json";
 
-const Dynamicdate = () => {
-  const currentDate = new Date();
+const Dynamicdate = ({ date }) => {
+  const currentDate = new Date(date);
   const formattedDate = format(currentDate, "eeee,  do MMMM", { locale: bn });
 
   const years = new Date().getFullYear();

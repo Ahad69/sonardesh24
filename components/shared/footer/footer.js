@@ -8,20 +8,21 @@ const Footer = () => {
   const date = new Date().getFullYear();
   return (
     <div className="bg-gray-100">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center ">
         <Link href={"/"}>
-          <img className="w-44 sm:w-64 mt-2" src="/logo.png" />
+          <img className="w-64 sm:w-64 mt-2" src="/logo.png" />
         </Link>
       </div>
-      <footer className="flex justify-between items-center p-10  text-black w-[1200px] m-auto gap-10">
-        <div className="text-center w-6/12">
+      <footer className="flex sm:flex-row  sm:justify-between items-center flex-col sm:p-10 p-0  text-black sm:w-[1200px] m-auto sm:gap-10 w-full ">
+        <div className="text-center sm:w-6/12 w-full">
           <p>
             সম্পাদক ও প্রকাশকঃ জিয়াউল হক
             <br />
             নির্বাহী সম্পাদকঃ মোস্তাক আহম্মেদ নওশাদ
           </p>
         </div>
-        <div className="text-center  w-6/12">
+        <br className="sm:hidden block" />
+        <div className="text-center  sm:w-6/12 w-full">
           যোগাযোগ- মুজিব সড়ক, কমিউনিটি হাসপাতাল ৫ তলা, সিরাজগঞ্জ
           <br />
           ইমেইল- admin@sonardesh24.com
@@ -43,6 +44,8 @@ const Footer = () => {
 
             <GrPinterest className="text-3xl text-white bg-red-500 hover:text-red-500 hover:bg-white cursor-pointer border rounded-full" />
           </div>
+          <br className="sm:hidden block" /> <br className="sm:hidden block" />{" "}
+          <br className="sm:hidden block" />
           <p>Copyright © {date} - All right reserved by Sonar Desh 24 Ltd</p>
         </div>
       </footer>

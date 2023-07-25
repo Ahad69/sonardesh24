@@ -11,7 +11,14 @@ const SingleNewsWithoutImage = ({ news }) => {
       </Link>
       <p className="text-lg">
         {news?.description?.slice(0, 200)}
-        {news?.description?.length > 170 ? <button>...Read More</button> : ""}
+        {news?.description?.length > 170 ? (
+          <Link href={`/news/${news?.permalink}`}>
+            {" "}
+            <button>...Read More</button>{" "}
+          </Link>
+        ) : (
+          ""
+        )}
       </p>
     </div>
   );

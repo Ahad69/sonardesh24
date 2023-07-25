@@ -4,7 +4,7 @@ import React from "react";
 
 const BigNews = ({ news }) => {
   return (
-    <div className="w-[650px] h-[440px] border border-gray-200 p-1">
+    <div className="sm:w-[650px] h-[440px] border border-gray-200 p-1 mt-5 sm:m-0">
       <Image
         width={650}
         height={370}

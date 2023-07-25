@@ -40,3 +40,13 @@ body {
   top: 0;
   right: 0;
 }
+
+.ant-btn {
+  background: red;
+}
+.ant-btn:hover {
+  background: rgb(86, 188, 31) !important;
+}
+.ant-btn-icon {
+  font-size: 25px;
+}

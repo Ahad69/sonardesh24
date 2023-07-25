@@ -3,14 +3,24 @@ import MostRead from "@/components/categoryMostRead";
 import CategoryTop from "@/components/categoryTop";
 import NewsList from "@/components/newsList";
 import Layout from "@/components/shared/layout/layout";
+import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 const SubCategory = ({ data }) => {
   const router = useRouter();
   return (
     <Layout>
+      <Head>
+        <title>
+          {data
+            ? router.query.subCategory?.[0] +
+              " - " +
+              router.query.subCategory?.[1]
+            : "Loading..."}
+        </title>
+      </Head>
       <>
         <br />
         <div className="flex items-center justify-between w-[1200px] m-auto">
@@ -20,21 +30,31 @@ const SubCategory = ({ data }) => {
             {router.query.subCategory?.[1]}
           </li>
         </div>
-        <br />
-        <br />
-        <CategoryTop news={data?.slice(0, 9)} />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <MostRead news={data?.slice(11, 20)} />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <NewsList news={data?.slice(0, 20)} />{" "}
+
+        {data.length == 0 ? (
+          <p className="text-5xl w-full h-96 flex justify-center items-center">
+            {" "}
+            No News Published
+          </p>
+        ) : (
+          <>
+            <br />
+            <br />
+            <CategoryTop news={data?.slice(0, 9)} />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <MostRead news={data?.slice(11, 20)} />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <NewsList news={data?.slice(0, 20)} />{" "}
+          </>
+        )}
       </>
     </Layout>
   );

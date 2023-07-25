@@ -7,7 +7,7 @@ import style from "./homeTop.module.css";
 const HomePageTop = ({ news }) => {
   return (
     <div className={style.container}>
-      <div>
+      <div className={style.smallContainer}>
         <Small news={news?.[3]} />
         <br />
         <Small news={news?.[2]} />
