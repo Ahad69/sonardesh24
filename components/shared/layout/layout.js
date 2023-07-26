@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       />
       <Modals setModalOpen={setModalOpen} modalOpen={modalOpen} />
       <hr />
-      {/* <Navbar /> */}
+      <Navbar />
       {children}
       <hr />
       <Footer />

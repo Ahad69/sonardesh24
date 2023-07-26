@@ -9,6 +9,7 @@ import Education from "@/components/education";
 import Sports from "@/components/sports";
 import LineCategory from "@/components/commoncategory/lineCategory";
 import Entertainment from "@/components/entertainment";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,9 @@ export default function Home({ data }) {
   return (
     <>
       <Layout>
+        <Head>
+          <title>সোনার দেশ</title>
+        </Head>
         <div className="mt-5">
           <HomePageTop news={data?.slice(0, 6)} />
           <br />
@@ -79,7 +83,9 @@ export default function Home({ data }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`http://localhost:5000/api/v1/news/`);
+  const res = await fetch(
+    `https://sonardesh24-backend.vercel.app/api/v1/news/`
+  );
   const result = await res.json();
 
   return {
