@@ -38,17 +38,17 @@ const Details = ({ data }) => {
   return (
     <Layout>
       <Head>
-        <title>{data.title ? data.title : "Loading..."}</title>
+        <title>{data?.title ? data?.title : "Loading..."}</title>
       </Head>
       <div className="flex items-center justify-between w-[1200px] m-auto mt-4">
         <li className="list-none text-lg hover:text-blue-400 flex items-center">
-          {data.category} <IoIosArrowForward className="mx-2" />{" "}
-          {data.subCategory}
+          {data?.category} <IoIosArrowForward className="mx-2" />{" "}
+          {data?.subCategory}
         </li>
       </div>
       <hr className="my-2" />
       <div className={style.detailsContainer}>
-        <div className="w-[750px]">
+        <div className="w-[820px]">
           <h1 className="text-3xl font-bold">{data?.title}</h1>
           <br />
           <div className="flex items-end">
@@ -73,7 +73,14 @@ const Details = ({ data }) => {
           <br />
           <h1 className="text-xl font-bold"> সোনারদেশ২৪: ডেস্কঃ </h1>
           <br />
-          <div>{data?.description}</div>
+
+          <div
+            className={`text-sm sm:text-lg `}
+            dangerouslySetInnerHTML={{
+              __html: data?.description,
+            }}
+          ></div>
+
           <hr className="my-5" />
           <div className="my-10">
             <h1 className="text-2xl font-bold text-center">
@@ -103,7 +110,7 @@ const Details = ({ data }) => {
           </div>
         </div>
         <div className="">
-          <div className="w-[380px] h-[600px] mt-10">
+          <div className="w-[300px] h-[600px] mt-10">
             <img
               className="h-full w-full"
               src="https://www.jcrew.com/brand_creative/2023/202303-Mar/fac_looks/w_fit_guide_pants_ANIMATING_06.gif"

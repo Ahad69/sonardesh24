@@ -10,14 +10,19 @@ const LineCategoryWedge = ({ news }) => {
           width={380}
           height={250}
           className="w-full h-[250px]"
-          src={news?.image}
+          src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
         />
         <Link href={`/news/${news?.permalink}`}>
           <h1 className="font-bold text-xl p-1 cursor-pointer">
             {news?.title.slice(0, 60)}
           </h1>
           <p className="text-lg p-1">
-            {news?.description?.slice(0, 50)}
+            <div
+              className={` text-sm sm:text-lg `}
+              dangerouslySetInnerHTML={{
+                __html: news?.description?.slice(0, 50),
+              }}
+            ></div>
             {news?.description?.length > 50 ? (
               <button>...Read More</button>
             ) : (

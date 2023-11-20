@@ -14,13 +14,13 @@ const Education = ({ news }) => {
         <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
       </div>
       <div className={style.content}>
-        <EducationWedge news={news?.[5]} />
+        <EducationWedge news={news?.[0]?.news} />
         <div className={style.section}>
           {/* <EducationWedge news={news?.[0]} /> */}{" "}
-          <NationalLeft news={news?.[1]} />
-          <NationalLeft news={news?.[2]} />
-          <NationalLeft news={news?.[3]} />
-          <NationalLeft news={news?.[4]} />
+          <NationalLeft news={news?.[1]?.news} />
+          <NationalLeft news={news?.[2]?.news} />
+          <NationalLeft news={news?.[3]?.news} />
+          <NationalLeft news={news?.[4]?.news} />
         </div>
       </div>
     </div>

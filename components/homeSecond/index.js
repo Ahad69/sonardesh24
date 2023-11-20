@@ -7,12 +7,12 @@ const HomeSecondSection = ({ news }) => {
   return (
     <div className={style.container}>
       <div className={style.nonAdSection}>
-        <SingleNewsWithoutImage news={news?.[0]} />
-        <SingleNewsWithoutImage news={news?.[1]} />
-        <SingleNewsWithoutImage news={news?.[2]} />
-        <Small news={news?.[3]} />
-        <Small news={news?.[4]} />
-        <Small news={news?.[5]} />
+        <SingleNewsWithoutImage news={news?.[0]?.news} />
+        <SingleNewsWithoutImage news={news?.[1]?.news} />
+        <SingleNewsWithoutImage news={news?.[2]?.news} />
+        <Small news={news?.[3]?.news} />
+        <Small news={news?.[4]?.news} />
+        <Small news={news?.[5]?.news} />
       </div>
 
       <div className="w-[350px] bg-red-400 m-5 h-[600px]">

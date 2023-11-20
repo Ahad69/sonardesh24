@@ -9,7 +9,7 @@ const BigNews = ({ news }) => {
         width={650}
         height={370}
         className="w-full h-[370px]"
-        src={news?.image}
+        src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />
       <Link href={`/news/${news?.permalink}`}>
         <h1 className="font-bold text-lg  cursor-pointer">{news?.title}</h1>

@@ -10,11 +10,11 @@ const NationalLeft = ({ news }) => {
           width={280}
           height={150}
           className="w-full h-[150px]"
-          src={news?.image}
+          src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
         />
         <Link href={`/news/${news?.permalink}`}>
           <h1 className="font-bold text-lg  cursor-pointer">
-            {news?.title.slice(0, 40)}
+            {news?.title?.slice(0, 40)}
           </h1>
         </Link>
       </div>

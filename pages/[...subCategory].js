@@ -31,7 +31,7 @@ const SubCategory = ({ data }) => {
           </li>
         </div>
 
-        {data.length == 0 ? (
+        {data?.length == 0 ? (
           <p className="text-5xl w-full h-96 flex justify-center items-center">
             {" "}
             No News Published

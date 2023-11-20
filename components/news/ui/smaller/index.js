@@ -9,7 +9,7 @@ const Smaller = ({ news }) => {
         width={120}
         height={70}
         className="w-[120px] h-[70px]"
-        src={news?.image}
+        src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />
       <Link href={`/news/${news?.permalink}`}>
         <h1 className=" text-md  font-bold ml-1  w-[150px]">

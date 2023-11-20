@@ -39,7 +39,7 @@ const Category = ({ data }) => {
           </ul>
         </div>
 
-        {data.length == 0 ? (
+        {data?.length == 0 ? (
           <p className="text-5xl w-full h-96 flex justify-center items-center">
             {" "}
             No News Published
@@ -78,11 +78,12 @@ export default Category;
 
 export const getServerSideProps = async (context) => {
   const { params } = context;
+
   const res = await fetch(
     `https://sonardesh24-backend.vercel.app/api/v1/news/?category=${params.category}`
   );
   const result = await res.json();
-
+  console.log(result);
   return {
     props: {
       data: result.data,

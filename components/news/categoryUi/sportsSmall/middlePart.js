@@ -9,16 +9,20 @@ const MiddlePart = ({ news }) => {
         width={460}
         height={250}
         className="w-full h-[250px]"
-        src={news?.image}
+        src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />
       <Link href={`/news/${news?.permalink}`}>
         <h1 className="font-bold text-xl p-1 cursor-pointer">
-          {news?.title.slice(0, 80)}
+          {news?.title?.slice(0, 80)}
         </h1>
-        <p className="text-lg p-1">
-          {news?.description?.slice(0, 180)}
-          {news?.description?.length > 200 ? <button>...Read More</button> : ""}
-        </p>
+
+        <div
+          className={`mt-5 text-sm sm:text-lg `}
+          dangerouslySetInnerHTML={{
+            __html: news?.description?.slice(0, 180),
+          }}
+        ></div>
+        {news?.description?.length > 200 ? <button>...Read More</button> : ""}
       </Link>
     </div>
   );

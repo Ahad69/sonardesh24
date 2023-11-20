@@ -9,7 +9,7 @@ const International = ({ news }) => {
         width={550}
         height={390}
         className="w-full h-full border p-2"
-        src={news?.image}
+        src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />
       <Link href={`/news/${news?.permalink}`}>
         <h1 className="text-center text-white text-xl w-full font-bold  absolute bottom-5">

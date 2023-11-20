@@ -4,7 +4,7 @@ import Smaller from "../news/ui/smaller";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import style from "./commoncategory.module.css";
 
-const CommonCategorySection = ({ news }) => {
+const CommonCategorySection = ({ politics, economics, laws, info }) => {
   return (
     <div className={style.container}>
       <div>
@@ -15,12 +15,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news?.[0]} />
+          <SingleNews news={politics?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news?.[2]} />
-            <Smaller news={news?.[1]} />
-            <Smaller news={news?.[3]} />
-            <Smaller news={news?.[4]} />
+            <Smaller news={politics?.[2]?.news} />
+            <Smaller news={politics?.[1]?.news} />
+            <Smaller news={politics?.[3]?.news} />
+            <Smaller news={politics?.[4]?.news} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
@@ -36,12 +36,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news?.[6]} />
+          <SingleNews news={economics?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news?.[7]} />
-            <Smaller news={news?.[8]} />
-            <Smaller news={news?.[9]} />
-            <Smaller news={news?.[10]} />
+            <Smaller news={economics?.[1]?.news} />
+            <Smaller news={economics?.[2]?.news} />
+            <Smaller news={economics?.[3]?.news} />
+            <Smaller news={economics?.[4]?.news} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
@@ -59,12 +59,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news?.[11]} />
+          <SingleNews news={laws?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news?.[12]} />
-            <Smaller news={news?.[13]} />
-            <Smaller news={news?.[14]} />
-            <Smaller news={news?.[15]} />
+            <Smaller news={laws?.[1]?.news} />
+            <Smaller news={laws?.[2]?.news} />
+            <Smaller news={laws?.[3]?.news} />
+            <Smaller news={laws?.[4]?.news} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>
@@ -82,12 +82,12 @@ const CommonCategorySection = ({ news }) => {
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
         <div className="flex">
-          <SingleNews news={news?.[16]} />
+          <SingleNews news={info?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
-            <Smaller news={news?.[17]} />
-            <Smaller news={news?.[18]} />
-            <Smaller news={news?.[19]} />
-            <Smaller news={news?.[20]} />
+            <Smaller news={info?.[1]?.news} />
+            <Smaller news={info?.[2]?.news} />
+            <Smaller news={info?.[3]?.news} />
+            <Smaller news={info?.[4]?.news} />
             <button className="text-red-600 font-bold flex items-center justify-end">
               আরও খবর <MdKeyboardDoubleArrowRight />
             </button>

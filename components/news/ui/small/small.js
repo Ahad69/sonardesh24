@@ -10,7 +10,7 @@ const Small = ({ news }) => {
         height={150}
         alt=""
         className="w-full h-[150px]"
-        src={news?.image}
+        src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />{" "}
       <Link href={`/news/${news?.permalink}`}>
         <h1 className="font-bold text-md  cursor-pointer">

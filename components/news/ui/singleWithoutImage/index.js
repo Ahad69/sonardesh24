@@ -10,7 +10,13 @@ const SingleNewsWithoutImage = ({ news }) => {
         </h1>
       </Link>
       <p className="text-lg">
-        {news?.description?.slice(0, 200)}
+        <div
+          className={`mt-5 text-sm sm:text-lg `}
+          dangerouslySetInnerHTML={{
+            __html: news?.description?.slice(0, 220),
+          }}
+        ></div>
+
         {news?.description?.length > 170 ? (
           <Link href={`/news/${news?.permalink}`}>
             {" "}

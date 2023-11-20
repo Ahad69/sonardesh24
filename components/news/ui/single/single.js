@@ -9,14 +9,19 @@ const SingleNews = ({ news }) => {
         width={270}
         height={150}
         className="w-full sm:h-[150px] h-[200px]"
-        src={news?.image}
+        src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />
       <Link href={`/news/${news?.permalink}`}>
         <h1 className="font-bold text-xl  cursor-pointer">
-          {news?.title.slice(0, 100)}
+          {news?.title?.slice(0, 100)}
         </h1>
         <p className="text-lg">
-          {news?.description?.slice(0, 170)}
+          <div
+            className={`mt-5 text-sm sm:text-lg `}
+            dangerouslySetInnerHTML={{
+              __html: news?.description?.slice(0, 170),
+            }}
+          ></div>
           {news?.description?.length > 170 ? <button>...Read More</button> : ""}
         </p>
       </Link>
