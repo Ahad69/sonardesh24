@@ -14,18 +14,18 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
-  const games = data.filter((a) => a.category == "খেলাধুলা");
-  const national = data.filter((a) => a.category == "জাতীয়");
-  const international = data.filter((a) => a.category == "আন্তর্জাতিক");
-  const politics = data.filter((a) => a.category == "রাজনীতি");
-  const economics = data.filter((a) => a.category == "অর্থনীতি");
-  const laws = data.filter((a) => a.category == "আইন আদালত");
-  const info = data.filter((a) => a.category == "তথ্য প্রযুক্তি");
-  const education = data.filter((a) => a.category == "শিক্ষা");
-  const lifestyle = data.filter((a) => a.category == "লাইফস্টাইল");
-  const jobs = data.filter((a) => a.category == "চাকরি");
-  const rashi = data.filter((a) => a.category == "রাশিফল");
-  const entertainment = data.filter((a) => a.category == "বিনোদন");
+  const games = data?.filter((a) => a?.category == "খেলাধুলা");
+  const national = data?.filter((a) => a?.category == "জাতীয়");
+  const international = data?.filter((a) => a?.category == "আন্তর্জাতিক");
+  const politics = data?.filter((a) => a?.category == "রাজনীতি");
+  const economics = data?.filter((a) => a?.category == "অর্থনীতি");
+  const laws = data?.filter((a) => a?.category == "আইন আদালত");
+  const info = data?.filter((a) => a?.category == "তথ্য প্রযুক্তি");
+  const education = data?.filter((a) => a?.category == "শিক্ষা");
+  const lifestyle = data?.filter((a) => a?.category == "লাইফস্টাইল");
+  const jobs = data?.filter((a) => a?.category == "চাকরি");
+  const rashi = data?.filter((a) => a?.category == "রাশিফল");
+  const entertainment = data?.filter((a) => a?.category == "বিনোদন");
 
   return (
     <>
@@ -102,7 +102,7 @@ export default function Home({ data }) {
 
 export const getServerSideProps = async () => {
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/v1/news/all`
+    `https://sonardesh24-backend.vercel.app/api/news/all`
   );
   const result = await res.json();
 

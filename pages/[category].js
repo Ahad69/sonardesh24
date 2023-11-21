@@ -80,7 +80,7 @@ export const getServerSideProps = async (context) => {
   const { params } = context;
 
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/v1/news/?category=${params.category}`
+    `https://sonardesh24-backend.vercel.app/api/news/?category=${params.category}`
   );
   const result = await res.json();
   console.log(result);
