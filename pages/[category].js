@@ -8,13 +8,17 @@ import categories from "./../public/categories.json";
 import Head from "next/head";
 import { Pagination } from "antd";
 
-const Category = ({ data }) => {
+const Category = ({ data, meta }) => {
   const router = useRouter();
   const cat = router.query.category;
   const category = categories.find((a) => a.name == cat);
   const subCategory = categories.filter(
     (a) => a?.parent?.$oid == category?._id?.$oid
   );
+
+  const onChange = (page) => {
+    router.push(`/${cat}?page=${page}`);
+  };
 
   return (
     <Layout>
@@ -23,7 +27,7 @@ const Category = ({ data }) => {
       </Head>
       <>
         <br />
-        <div className="flex items-center justify-between w-[1200px] m-auto">
+        <div className="flex items-center justify-between flex-col sm:flex-row sm:w-[1200px] m-auto">
           <li className="list-none text-2xl hover:text-blue-400">
             {router.query.category}
           </li>
@@ -31,7 +35,7 @@ const Category = ({ data }) => {
           <ul className="flex items-center justify-center">
             {subCategory?.map((a) => (
               <Link href={`/${router.query.category}/${a?.name}`}>
-                <li className="mx-5 hover:text-blue-400 cursor-pointer">
+                <li className="sm:mx-5 mx-1 text-sm sm:text-base hover:text-blue-400 cursor-pointer">
                   {a?.name}
                 </li>
               </Link>
@@ -62,10 +66,11 @@ const Category = ({ data }) => {
             <br />
             <NewsList news={data?.slice(0, 20)} />
             <Pagination
-              className="w-6/12 m-auto"
+              className="w-6/12 m-auto  flex justify-center"
               defaultCurrent={1}
               pageSize={10}
-              total={500}
+              total={meta?.total}
+              onChange={onChange}
             />
           </>
         )}
@@ -77,16 +82,17 @@ const Category = ({ data }) => {
 export default Category;
 
 export const getServerSideProps = async (context) => {
-  const { params } = context;
+  const { params, query } = context;
 
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/news/?category=${params.category}`
+    `https://sonardesh24-backend.vercel.app/api/news/category?category=${query.category}&page=${query?.page}`
   );
   const result = await res.json();
-  console.log(result);
+
   return {
     props: {
       data: result.data,
+      meta: result.meta,
     },
   };
 };

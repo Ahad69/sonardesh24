@@ -23,8 +23,9 @@ const Dynamicdate = ({ date }) => {
   return (
     <div>
       <div>
-        <div className="text-sm text-end mr-1 ml-1">
-          {formattedDate}, <br className="block sm:hidden" /> {thisYear.bn}
+        <div className="text-sm flex text-end mr-1 ml-1">
+          {formattedDate}, <br className="block sm:hidden" />{" "}
+          <p>{thisYear.bn}</p>
         </div>
       </div>
     </div>

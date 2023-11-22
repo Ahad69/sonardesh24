@@ -19,19 +19,19 @@ const LineCategory = ({ lifestyle, rashi, jobs }) => {
         <Lines news={lifestyle?.[3]?.news} />
       </div>
       <div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-10 sm:mt-0">
           <h1 className=" text-white text-2xl bg-green-600 p-2 w-[130px]  text-center capitalize">
             চাকরি
           </h1>
           <h1 className="font-bold text-blue-400 text-md mr-6">সকল খবর </h1>
         </div>
         <LineCategoryWedge news={jobs?.[0]?.news} />
-        <Lines news={jobs?.[1]?.news} />
+        <Lines news={jobs?.[0]?.news} />
         <Lines news={jobs?.[2]?.news} />
         <Lines news={jobs?.[3]?.news} />
       </div>
       <div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center  mt-10 sm:mt-0">
           <h1 className=" text-white text-2xl bg-green-600 p-2 w-[130px]  text-center capitalize">
             রাশিফল
           </h1>

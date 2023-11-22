@@ -4,15 +4,15 @@ import React from "react";
 
 const Smaller = ({ news }) => {
   return (
-    <div className="w-[300px] h-[93px] flex justify-between items-center border p-2">
+    <div className="sm:w-[300px] sm:h-[93px] flex justify-between items-start border  p-2">
       <Image
         width={120}
         height={70}
-        className="w-[120px] h-[70px]"
+        className="sm:w-[120px] h-[70px]"
         src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
       />
       <Link href={`/news/${news?.permalink}`}>
-        <h1 className=" text-md  font-bold ml-1  w-[150px]">
+        <h1 className=" text-md  font-bold ml-1 p-2 sm:p-0 sm:w-[150px]">
           {news?.title?.slice(0, 40)}
         </h1>
       </Link>

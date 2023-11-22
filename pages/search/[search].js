@@ -10,21 +10,21 @@ const Search = ({ result }) => {
 
   const onChange = (page) => {
     router.push(`/search/${router.query.search}?page=${page}`);
-    console.log(page);
   };
 
   return (
     <Layout>
-      <div className="w-[1200px] m-auto">
-        <h1 className="my-5 text-2xl">
+      <div className="sm:w-[1200px] m-auto">
+        <h1 className="my-5 text-2xl p-2">
           {" "}
           ফলাফল দেখানো হচ্ছে "<b>{router?.query.search}</b>" এর
         </h1>
         <NewsList news={data?.slice(0, 20)} />
         <br />
         <Pagination
-          defaultCurrent={meta.page}
-          pageSize={meta.limit}
+          className="w-6/12 m-auto  flex justify-center"
+          defaultCurrent={router?.query?.page}
+          pageSize={10}
           total={meta.total}
           onChange={onChange}
         />

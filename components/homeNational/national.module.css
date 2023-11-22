@@ -18,3 +18,19 @@
   grid-gap: 15px;
   margin-left: auto;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .leftContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .left {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .right {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

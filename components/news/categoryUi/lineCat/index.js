@@ -5,7 +5,7 @@ import React from "react";
 const LineCategoryWedge = ({ news }) => {
   return (
     <div>
-      <div className="w-[380px] h-[420px] border border-gray-200 p-2 overflow-hidden">
+      <div className="sm:w-[380px] sm:h-[420px] border border-gray-200 p-2 overflow-hidden">
         <Image
           width={380}
           height={250}

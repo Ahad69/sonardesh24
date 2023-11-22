@@ -13,7 +13,7 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ data }) {
+export default function Home({ data, latest }) {
   const games = data?.filter((a) => a?.category == "খেলাধুলা");
   const national = data?.filter((a) => a?.category == "জাতীয়");
   const international = data?.filter((a) => a?.category == "আন্তর্জাতিক");
@@ -27,6 +27,8 @@ export default function Home({ data }) {
   const rashi = data?.filter((a) => a?.category == "রাশিফল");
   const entertainment = data?.filter((a) => a?.category == "বিনোদন");
 
+  console.log(latest);
+
   return (
     <>
       <Layout>
@@ -34,13 +36,13 @@ export default function Home({ data }) {
           <title>সোনার দেশ</title>
         </Head>
         <div className="mt-5">
-          <HomePageTop news={data?.slice(0, 6)} />
+          <HomePageTop news={latest?.slice(0, 6)} />
+          <br className="hidden sm:block" />
+          <br className="hidden sm:block" />
+          <br className="hidden sm:block" />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-          <HomeSecondSection news={data?.slice(7, 13)} />
+          <HomeSecondSection news={latest?.slice(7, 13)} />
           <br />
           <br />
           <hr />
@@ -109,6 +111,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       data: result.data,
+      latest: result.latest,
     },
   };
 };

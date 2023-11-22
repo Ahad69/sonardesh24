@@ -4,7 +4,7 @@ import React from "react";
 
 const EducationWedge = ({ news }) => {
   return (
-    <div className="relative w-[600px] h-[440px]">
+    <div className="relative sm:w-[600px] w-full sm:h-[440px]">
       <Image
         width={600}
         height={440}

@@ -4,7 +4,7 @@ import React from "react";
 
 const International = ({ news }) => {
   return (
-    <div className="relative w-[550px] h-[390px]">
+    <div className="relative sm:w-[550px] sm:h-[390px]">
       <Image
         width={550}
         height={390}

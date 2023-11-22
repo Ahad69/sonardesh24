@@ -4,7 +4,7 @@ import React from "react";
 
 const MiddlePart = ({ news }) => {
   return (
-    <div className="w-[460px] h-[450px] border border-gray-200 p-2 overflow-hidden">
+    <div className="sm:w-[460px] sm:h-[450px] border border-gray-200 p-2 overflow-hidden">
       <Image
         width={460}
         height={250}

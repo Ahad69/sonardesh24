@@ -9,16 +9,16 @@ const NewsListWedge = ({ news }) => {
         <Image
           width={450}
           height={250}
-          className="w-[450px] h-[250px]"
+          className="sm:w-[450px] sm:h-[250px]"
           src={news?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"}
         />
       </div>
-      <div className="w-[550px] h-[250px] mx-5">
+      <div className="sm:w-[550px] sm:h-[250px] mx-5">
         <Link href={`/news/${news?.permalink}`}>
           <h1 className="text-2xl font-bold truncate">
             {news?.title?.slice(0, 30)} {news?.title?.length > 30 ? "..." : ""}
           </h1>
-          <h1 className="text-lg">
+          <h1 className="text-lg hidden sm:block">
             <div
               className={` text-sm sm:text-lg `}
               dangerouslySetInnerHTML={{

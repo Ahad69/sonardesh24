@@ -6,16 +6,29 @@ import Small from "../news/ui/small/small";
 const HomeSecondSection = ({ news }) => {
   return (
     <div className={style.container}>
-      <div className={style.nonAdSection}>
-        <SingleNewsWithoutImage news={news?.[0]?.news} />
-        <SingleNewsWithoutImage news={news?.[1]?.news} />
-        <SingleNewsWithoutImage news={news?.[2]?.news} />
-        <Small news={news?.[3]?.news} />
-        <Small news={news?.[4]?.news} />
-        <Small news={news?.[5]?.news} />
+      <div>
+        <div className={style.nonAdSection}>
+          <SingleNewsWithoutImage news={news?.[0]} />
+          <SingleNewsWithoutImage news={news?.[1]} />
+          <SingleNewsWithoutImage news={news?.[2]} />
+          <div className="block sm:hidden">
+            <SingleNewsWithoutImage news={news?.[3]} />
+          </div>
+        </div>
+
+        <div className={style.nonAdSection}>
+          <Small news={news?.[4]} />
+          <Small news={news?.[5]} />
+
+          <Small news={news?.[6]} />
+
+          <div className="block sm:hidden">
+            <Small news={news?.[7]} />
+          </div>
+        </div>
       </div>
 
-      <div className="w-[350px] bg-red-400 m-5 h-[600px]">
+      <div className="sm:w-[350px] sm:mt-10 hidden sm:block bg-red-400 sm:m-5 sm:h-[600px]">
         {" "}
         <img
           className="h-full"

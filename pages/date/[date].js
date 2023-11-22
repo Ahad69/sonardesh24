@@ -18,8 +18,8 @@ const Search = ({ result }) => {
       <Head>
         <title>Results for {result ? router.query.date : "Loading..."}</title>
       </Head>
-      <div className="w-[1200px] m-auto">
-        <h1 className="my-5 text-2xl">
+      <div className="sm:w-[1200px] m-auto">
+        <h1 className="my-5 text-2xl p-2">
           {" "}
           ফলাফল দেখানো হচ্ছে "<b>{router?.query.date}</b>" এর
         </h1>
@@ -33,8 +33,9 @@ const Search = ({ result }) => {
             <NewsList news={data?.slice(0, 20)} />
             <br />
             <Pagination
+              className="w-6/12 m-auto  flex justify-center"
               defaultCurrent={meta?.page}
-              pageSize={meta?.limit}
+              pageSize={10}
               total={meta?.total}
               onChange={onChange}
             />{" "}
@@ -51,7 +52,7 @@ export const getServerSideProps = async (context) => {
   const { query } = context;
 
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/news/date?page=${query.page}&createdAt=${query.date}&limit=10`
+    `https://sonardesh24-backend.vercel.app/api/news/date?page=${query.page}&createdAt=${query.date}`
   );
   const result = await res.json();
 

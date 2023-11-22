@@ -14,7 +14,7 @@ const CommonCategorySection = ({ politics, economics, laws, info }) => {
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <SingleNews news={politics?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
             <Smaller news={politics?.[2]?.news} />
@@ -35,7 +35,7 @@ const CommonCategorySection = ({ politics, economics, laws, info }) => {
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <SingleNews news={economics?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
             <Smaller news={economics?.[1]?.news} />
@@ -58,7 +58,7 @@ const CommonCategorySection = ({ politics, economics, laws, info }) => {
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <SingleNews news={laws?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
             <Smaller news={laws?.[1]?.news} />
@@ -81,7 +81,7 @@ const CommonCategorySection = ({ politics, economics, laws, info }) => {
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <SingleNews news={info?.[0]?.news} />
           <div className="flex flex-col gap-2 mx-2">
             <Smaller news={info?.[1]?.news} />

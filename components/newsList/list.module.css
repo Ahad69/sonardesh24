@@ -7,3 +7,12 @@
 .listContainer {
   width: 900px;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .listContainer {
+    display: none;
+  }
+}

@@ -8,15 +8,15 @@ const HomePageTop = ({ news }) => {
   return (
     <div className={style.container}>
       <div className={style.smallContainer}>
-        <Small news={news?.[0]?.news} />
+        <Small news={news?.[2]} />
         <br />
-        <Small news={news?.[1]?.news} />
+        <Small news={news?.[3]} />
       </div>
       <div>
-        <SingleNews news={news?.[2]?.news} />
+        <SingleNews news={news?.[1]} />
       </div>
       <div>
-        <BigNews news={news?.[3]?.news} />
+        <BigNews news={news?.[0]} />
       </div>
     </div>
   );

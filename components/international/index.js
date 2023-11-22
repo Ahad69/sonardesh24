@@ -16,24 +16,27 @@ const InternationalSection = ({ news }) => {
       </div>
       <div className={style.containers}>
         <div>
-          <div className="flex">
+          <div className="flex sm:flex-row flex-col">
             <International news={news?.[0]?.news} />
 
-            <div className="ml-2 flex flex-col justify-between gap-1">
+            <div className=" mx-2 sm:ml-2 flex flex-col justify-between gap-1">
               <Smaller news={news?.[1]?.news} />
               <Smaller news={news?.[2]?.news} />
               <Smaller news={news?.[3]?.news} />
               <Smaller news={news?.[4]?.news} />
             </div>
           </div>
-          <div className="flex gap-2 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4">
+            <NationalLeft news={news?.[0]?.news} />
             <NationalLeft news={news?.[6]?.news} />
             <NationalLeft news={news?.[7]?.news} />
-            <NationalLeft news={news?.[8]?.news} />
+            <div className="block sm:hidden">
+              <NationalLeft news={news?.[8]?.news} />
+            </div>
           </div>
         </div>
 
-        <div className="w-[350px] bg-red-400 m-5 h-[600px]">
+        <div className="w-[350px] bg-red-400 m-5 h-[600px] hidden sm:block">
           <img
             className="h-full"
             src="https://www.jcrew.com/brand_creative/2023/202303-Mar/fac_looks/w_fit_guide_pants_ANIMATING_06.gif"

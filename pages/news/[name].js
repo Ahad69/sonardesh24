@@ -12,6 +12,7 @@ import Image from "next/image";
 import Head from "next/head";
 
 const Details = ({ data }) => {
+  console.log(data);
   const newsPageURL = `https://sonardesh24.com/news/${data.permalink}`;
 
   const shareOnFacebook = () => {
@@ -40,42 +41,55 @@ const Details = ({ data }) => {
       <Head>
         <title>{data?.title ? data?.title : "Loading..."}</title>
       </Head>
-      <div className="flex items-center justify-between w-[1200px] m-auto mt-4">
-        <li className="list-none text-lg hover:text-blue-400 flex items-center">
+      <div className="flex items-center justify-between sm:w-[1200px] m-auto mt-4">
+        <li className="list-none text-lg hover:text-blue-400 flex items-center sm:p-0 p-2">
           {data?.category} <IoIosArrowForward className="mx-2" />{" "}
           {data?.subCategory}
         </li>
       </div>
       <hr className="my-2" />
       <div className={style.detailsContainer}>
-        <div className="w-[820px]">
-          <h1 className="text-3xl font-bold">{data?.title}</h1>
+        <div className="sm:w-[820px]">
+          <h1 className="sm:text-3xl text-2xl font-bold sm:p-0 p-2">
+            {data?.title}
+          </h1>
           <br />
-          <div className="flex items-end">
+
+          <div className="flex flex-col sm:flex-row">
             <img className="w-[50px] mr-5" src="/noimage.gif" />
             <div>
               <h1 className="text-md">সোনারদেশ ২৪ ডেস্ক</h1>
               <hr />
-              <div className="flex items-center text-sm">
-                আপডেট করা হয়েছে - <Dynamicdate date={data.createdAt} /> /{" "}
-                <ImEye className="mx-2" /> {data?.visited} বার পড়া হয়েছে
+              <div className="flex sm:items-center  flex-row w-full">
+                <span className="hidden sm:block text-sm">
+                  আপডেট করা হয়েছে -{" "}
+                </span>
+                <p className=" flex items-center">
+                  <Dynamicdate date={data.createdAt} /> /{" "}
+                </p>
+                <p className="flex items-center text-sm">
+                  <ImEye className="mx-2" /> {data?.visited} বার পড়া হয়েছে
+                </p>
               </div>
             </div>
           </div>
+
           <br />
           <Image
             width={750}
             height={450}
-            className="w-full h-[450px]"
-            src={data?.image}
+            className="w-full sm:h-[450px] sm:p-0 p-2"
+            src={
+              data?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"
+            }
             alt="a"
           />
           <br />
-          <h1 className="text-xl font-bold"> সোনারদেশ২৪: ডেস্কঃ </h1>
+          <h1 className="text-xl sm:p-0 p-2 font-bold"> সোনারদেশ২৪: ডেস্কঃ </h1>
           <br />
 
           <div
-            className={`text-sm sm:text-lg `}
+            className={` sm:text-lg w-[400px] sm:w-full sm:p-0 p-2`}
             dangerouslySetInnerHTML={{
               __html: data?.description,
             }}
@@ -86,7 +100,7 @@ const Details = ({ data }) => {
             <h1 className="text-2xl font-bold text-center">
               সংবাদটি শেয়ার করুন
             </h1>
-            <div className=" flex justify-around items-center w-6/12 m-auto mt-4">
+            <div className=" flex justify-around items-center sm:w-6/12 m-auto mt-4">
               <GrFacebook
                 onClick={() => shareOnFacebook()}
                 className="text-3xl text-white bg-blue-600 hover:text-blue-500 hover:bg-white cursor-pointer border"
@@ -110,7 +124,7 @@ const Details = ({ data }) => {
           </div>
         </div>
         <div className="">
-          <div className="w-[300px] h-[600px] mt-10">
+          <div className="w-[300px] h-[600px] mt-10 hidden sm:block">
             <img
               className="h-full w-full"
               src="https://www.jcrew.com/brand_creative/2023/202303-Mar/fac_looks/w_fit_guide_pants_ANIMATING_06.gif"

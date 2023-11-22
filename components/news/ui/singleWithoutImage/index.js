@@ -3,7 +3,7 @@ import React from "react";
 
 const SingleNewsWithoutImage = ({ news }) => {
   return (
-    <div className="w-[270px] h-[350px] border border-gray-200 p-2 overflow-hidden">
+    <div className="sm:w-[270px] h-[350px] border border-gray-200 p-2 overflow-hidden">
       <Link href={`/news/${news?.permalink}`}>
         <h1 className="font-bold text-lg  cursor-pointer">
           {news?.title?.slice(0, 50)}

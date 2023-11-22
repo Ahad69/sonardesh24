@@ -5,7 +5,10 @@ const { Search } = Input;
 
 const Modals = ({ setModalOpen, modalOpen }) => {
   const router = useRouter();
-  const onSearch = (value) => router.push(`/search/${value}?page=1`);
+  const onSearch = (value) => {
+    setModalOpen(!modalOpen);
+    router.push(`/search/${value}?page=1`);
+  };
 
   return (
     <div>

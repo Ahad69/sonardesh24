@@ -9,7 +9,7 @@
 @media only screen and (max-width: 768px) {
   .container {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .smallContainer {
     width: 100%;

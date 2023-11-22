@@ -14,12 +14,17 @@ const Sports = ({ news }) => {
         <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
       </div>
       <div className={style.content}>
+        <div className="block sm:hidden">
+          <MiddlePart news={news?.[6]?.news} />
+        </div>
         <div>
           <SportsSmall news={news?.[0]?.news} />
           <SportsSmall news={news?.[1]?.news} />
           <SportsSmall news={news?.[2]?.news} />
         </div>
-        <MiddlePart news={news?.[6]?.news} />
+        <div className="hidden sm:block">
+          <MiddlePart news={news?.[6]?.news} />
+        </div>
         <div>
           <SportsSmallReverse news={news?.[3]?.news} />
           <SportsSmallReverse news={news?.[4]?.news} />
