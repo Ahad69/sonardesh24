@@ -144,7 +144,7 @@ export default Details;
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/news/permalink?permalink=${params.name}`
+    `http://localhost:5000/api/news/permalink?permalink=${params.name}`
   );
   const result = await res.json();
 

@@ -104,7 +104,7 @@ export default function Home({ data, latest }) {
 
 export const getServerSideProps = async () => {
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/news/all`
+    `http://localhost:5000/api/news/all`
   );
   const result = await res.json();
 
