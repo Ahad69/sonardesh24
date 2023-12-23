@@ -12,7 +12,6 @@ import Image from "next/image";
 import Head from "next/head";
 
 const Details = ({ data }) => {
-  console.log(data);
   const newsPageURL = `https://sonardesh24.com/news/${data.permalink}`;
 
   const shareOnFacebook = () => {

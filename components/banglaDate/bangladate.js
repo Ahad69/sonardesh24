@@ -15,8 +15,6 @@ const BanglaDates = () => {
     const year = currentDate.getFullYear() - 593;
     const month = currentDate.getMonth() + 1;
     const day = currentDate.getDate();
-
-    console.log(day, month, year);
   };
 
   // getBengaliDate();
