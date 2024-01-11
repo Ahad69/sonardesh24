@@ -32,6 +32,8 @@ const SubCategory = ({ data, meta }) => {
     );
   };
 
+  console.log(data);
+
   return (
     <Layout>
       <Head>
@@ -121,7 +123,6 @@ export const getServerSideProps = async (context) => {
     }&page=${query?.page ?? 1}&city=${query.city}`
   );
   const result = await res.json();
-
   return {
     props: {
       data: result.data,
