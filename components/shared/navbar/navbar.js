@@ -10,9 +10,7 @@ const Navbar = () => {
           {" "}
           <Link href={"/"}>সর্বশেষ</Link>{" "}
         </li>
-        <li>
-          <Link href={"/সারাদেশ "}>সারাদেশ</Link>{" "}
-        </li>
+
         <li>
           <Link href={"/জাতীয়"}>জাতীয়</Link>{" "}
         </li>
@@ -27,6 +25,9 @@ const Navbar = () => {
         <li>
           {" "}
           <Link href={"/অর্থনীতি"}>অর্থনীতি</Link>{" "}
+        </li>
+        <li>
+          <Link href={"/সারাদেশ "}>সারাদেশ</Link>{" "}
         </li>
         <li>
           {" "}
@@ -60,3 +61,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

@@ -34,6 +34,7 @@ const HomeSecondSection = ({ news }) => {
           className="h-full"
           src="https://www.jcrew.com/brand_creative/2023/202303-Mar/fac_looks/w_fit_guide_pants_ANIMATING_06.gif"
         />
+        <div></div>
       </div>
     </div>
   );

@@ -10,14 +10,21 @@ import { IoIosArrowForward } from "react-icons/io";
 import categories from "./../public/categories.json";
 import Link from "next/link";
 import { Pagination } from "antd";
+import cities from "./../public/cities.json";
 
 const SubCategory = ({ data, meta }) => {
   const router = useRouter();
   const cat = router.query.subCategory?.[0];
+
+  const subcat = router.query.subCategory?.[1];
+
   const category = categories.find((a) => a.name == cat);
+
   const subCategory = categories.filter(
     (a) => a?.parent?.$oid == category?._id?.$oid
   );
+
+  const supersubCategory = cities.filter((a) => a.division == subcat);
 
   const onChange = (page) => {
     router.push(
@@ -38,13 +45,13 @@ const SubCategory = ({ data, meta }) => {
       </Head>
       <>
         <br />
-        <div className="flex items-center justify-between flex-col sm:flex-row sm:w-[1200px] m-auto">
+        <div className="sm:w-[1200px] m-auto flex justify-between items-start">
           <li className="list-none text-2xl hover:text-blue-400 flex items-center">
             {router.query.subCategory?.[0]}
             <IoIosArrowForward />
             {router.query.subCategory?.[1]}
           </li>
-          <ul className="flex items-center justify-center">
+          <ul className="flex items-center justify-end w-[1000px] flex-wrap">
             {subCategory?.map((a) => (
               <Link href={`/${router.query.subCategory?.[0]}/${a?.name}`}>
                 <li className="sm:mx-5 mx-1 text-sm sm:text-base hover:text-blue-400 cursor-pointer">
@@ -54,6 +61,18 @@ const SubCategory = ({ data, meta }) => {
             ))}
           </ul>
         </div>
+        <hr className="my-3" />
+        <ul className="flex items-center justify-center sm:w-[1200px] m-auto flex-wrap">
+          {supersubCategory?.map((a) => (
+            <Link
+              href={`/${router.query.subCategory?.[0]}/${router.query.subCategory?.[1]}?city=${a.name}`}
+            >
+              <li className="sm:mx-5 mx-1 text-sm sm:text-base hover:text-blue-400 cursor-pointer">
+                {a?.name}
+              </li>
+            </Link>
+          ))}
+        </ul>
 
         {data?.length == 0 ? (
           <p className="text-5xl w-full h-96 flex justify-center items-center">
@@ -97,7 +116,9 @@ export default SubCategory;
 export const getServerSideProps = async (context) => {
   const { params, query } = context;
   const res = await fetch(
-    `https://sonardesh24-backend.vercel.app/api/news/subCategory?subCategory=${params.subCategory?.[1]}&page=${query?.page}`
+    `http://localhost:5000/api/news/subCategory?subCategory=${
+      params.subCategory?.[1]
+    }&page=${query?.page ?? 1}&city=${query.city}`
   );
   const result = await res.json();
 
