@@ -117,6 +117,7 @@ export default SubCategory;
 
 export const getServerSideProps = async (context) => {
   const { params, query } = context;
+  console.log(params, query, "subcategory");
   const res = await fetch(
     `https://sonardesh24-backend.vercel.app/api/news/subCategory?subCategory=${
       params.subCategory?.[1]
