@@ -85,7 +85,7 @@ export const getServerSideProps = async (context) => {
   const { params, query } = context;
 
   const res = await fetch(
-    `http://localhost:5000/api/news/category?category=${query.category}&page=${query?.page}`
+    `https://sonardesh24-backend.vercel.app/api/news/category?category=${query.category}&page=${query?.page}`
   );
   const result = await res.json();
 
