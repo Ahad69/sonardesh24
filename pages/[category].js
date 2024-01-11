@@ -83,7 +83,7 @@ export default Category;
 
 export const getServerSideProps = async (context) => {
   const { params, query } = context;
-  console.log(params, query, "category");
+
   const res = await fetch(
     `https://sonardesh24-backend.vercel.app/api/news/category?category=${query.category}&page=${query?.page}`
   );
