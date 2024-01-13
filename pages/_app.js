@@ -1,5 +1,6 @@
-import "@/styles/globals.css";
-import "@/styles/fonts.css";
+//import "@/styles/globals.css";
+//import "@/styles/fonts.css";
+import "../styles/globals.css";
 
 import { useEffect } from "react";
 
