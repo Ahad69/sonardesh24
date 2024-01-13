@@ -1,6 +1,6 @@
-//import "@/styles/globals.css";
+import "@/styles/globals.css";
 //import "@/styles/fonts.css";
-import "../styles/globals.css";
+//import "../styles/globals.css";
 
 import { useEffect } from "react";
 
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
   //   };
   // }, []);
   return (
-    <div className="body" id="google_translate_element">
+    <div>
       <Component {...pageProps} />
     </div>
   );
