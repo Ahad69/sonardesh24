@@ -5,7 +5,7 @@ import React from "react";
 const Small = ({ news }) => {
   return (
     <div className="sm:w-[250px] w-[190px] h-[210px] border border-gray-200 p-1 overflow-hidden m-auto">
-      <Image
+      <img
         width={250}
         height={150}
         alt=""

@@ -32,7 +32,7 @@ const SubCategory = ({ data, meta }) => {
     );
   };
 
-  console.log(data);
+
 
   return (
     <Layout>

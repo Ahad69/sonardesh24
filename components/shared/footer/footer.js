@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="text-center  sm:w-6/12 w-full">
           যোগাযোগ- মুজিব সড়ক, কমিউনিটি হাসপাতাল ৫ তলা, সিরাজগঞ্জ
           <br />
-          ইমেইল- admin@sonardesh24.com
+          ইমেইল- sonardesh24.corr@gmail.com
           <br />
           মোবাইল : 01324 977 175, 01716-076444
         </div>
@@ -46,7 +46,10 @@ const Footer = () => {
           </div>
           <br className="sm:hidden block" /> <br className="sm:hidden block" />{" "}
           <br className="sm:hidden block" />
-          <p>Copyright © {date} - All right reserved by Sonar Desh 24 Ltd</p>
+          <br />
+          <p className="text-center">
+            Copyright © {date} - All right reserved by Sonar Desh 24 Ltd
+          </p>
         </div>
       </footer>
     </div>

@@ -89,6 +89,7 @@ const Details = ({ data }) => {
 
           <div
             className={` sm:text-lg w-[400px] sm:w-full sm:p-0 p-2`}
+
             dangerouslySetInnerHTML={{
               __html: data?.description,
             }}

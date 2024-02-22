@@ -11,9 +11,10 @@ import LineCategory from "@/components/commoncategory/lineCategory";
 import Entertainment from "@/components/entertainment";
 import Head from "next/head";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ data, latest }) {
+export default function Home({ data, latest, others }) {
   const games = data?.filter((a) => a?.category == "খেলাধুলা");
   const national = data?.filter((a) => a?.category == "জাতীয়");
   const international = data?.filter((a) => a?.category == "আন্তর্জাতিক");
@@ -22,12 +23,12 @@ export default function Home({ data, latest }) {
   const laws = data?.filter((a) => a?.category == "আইন আদালত");
   const info = data?.filter((a) => a?.category == "তথ্য প্রযুক্তি");
   const education = data?.filter((a) => a?.category == "শিক্ষা");
-  const lifestyle = data?.filter((a) => a?.category == "লাইফস্টাইল");
-  const jobs = data?.filter((a) => a?.category == "চাকরি");
-  const rashi = data?.filter((a) => a?.category == "রাশিফল");
+  const lifestyle = others?.filter((a) => a?.subCategory == "লাইফস্টাইল");
+  const jobs = others?.filter((a) => a?.subCategory == "চাকরি");
+  const rashi = others?.filter((a) => a?.subCategory == "রাশিফল");
   const entertainment = data?.filter((a) => a?.category == "বিনোদন");
 
-
+  console.log(national, "home");
 
   return (
     <>
@@ -36,13 +37,13 @@ export default function Home({ data, latest }) {
           <title>সোনার দেশ</title>
         </Head>
         <div className="mt-5">
-          <HomePageTop news={latest?.slice(0, 6)} />
+          <HomePageTop news={latest?.slice(0, 4)} />
           <br className="hidden sm:block" />
           <br className="hidden sm:block" />
           <br className="hidden sm:block" />
           <br />
           <br />
-          <HomeSecondSection news={latest?.slice(7, 13)} />
+          <HomeSecondSection news={latest?.slice(4, 13)} />
           <br />
           <br />
           <hr />
@@ -112,6 +113,7 @@ export const getServerSideProps = async () => {
     props: {
       data: result.data,
       latest: result.latest,
+      others: result.others,
     },
   };
 };

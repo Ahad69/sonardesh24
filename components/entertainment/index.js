@@ -5,6 +5,8 @@ import style from "./entertain.module.css";
 import MiddlePart from "../news/categoryUi/sportsSmall/middlePart";
 
 const Entertainment = ({ news }) => {
+
+  console.log(news);
   return (
     <div className={style.container}>
       <div className="flex justify-between items-center">
@@ -18,18 +20,18 @@ const Entertainment = ({ news }) => {
           <MiddlePart news={news?.[0]?.news} />
         </div>
         <div>
-          <SportsSmall news={news?.[6]?.news} />
-          <SportsSmall news={news?.[0]?.news} />
+          <SportsSmall news={news?.[3]?.news} />
           <SportsSmall news={news?.[2]?.news} />
+          <SportsSmall news={news?.[1]?.news} />
         </div>
 
         <div className="hidden sm:block">
           <MiddlePart news={news?.[0]?.news} />
         </div>
         <div>
-          <SportsSmallReverse news={news?.[0]?.news} />
           <SportsSmallReverse news={news?.[4]?.news} />
           <SportsSmallReverse news={news?.[5]?.news} />
+          <SportsSmallReverse news={news?.[6]?.news} />
         </div>
       </div>
     </div>

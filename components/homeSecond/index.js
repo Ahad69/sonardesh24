@@ -4,6 +4,7 @@ import style from "./second.module.css";
 import Small from "../news/ui/small/small";
 
 const HomeSecondSection = ({ news }) => {
+
   return (
     <div className={style.container}>
       <div>
@@ -19,7 +20,6 @@ const HomeSecondSection = ({ news }) => {
         <div className={style.nonAdSection}>
           <Small news={news?.[4]} />
           <Small news={news?.[5]} />
-
           <Small news={news?.[6]} />
 
           <div className="block sm:hidden">
