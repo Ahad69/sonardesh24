@@ -15,20 +15,20 @@ const Sports = ({ news }) => {
       </div>
       <div className={style.content}>
         <div className="block sm:hidden">
-          <MiddlePart news={news?.[6]?.news} />
+          <MiddlePart news={news?.[0]?.news} />
         </div>
         <div>
-          <SportsSmall news={news?.[0]?.news} />
           <SportsSmall news={news?.[1]?.news} />
           <SportsSmall news={news?.[2]?.news} />
+          <SportsSmall news={news?.[3]?.news} />
         </div>
         <div className="hidden sm:block">
-          <MiddlePart news={news?.[6]?.news} />
+          <MiddlePart news={news?.[0]?.news} />
         </div>
         <div>
-          <SportsSmallReverse news={news?.[3]?.news} />
           <SportsSmallReverse news={news?.[4]?.news} />
           <SportsSmallReverse news={news?.[5]?.news} />
+          <SportsSmallReverse news={news?.[6]?.news} />
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const SingleNewsWithoutImage = ({ news }) => {
         <div
           className={`mt-5 text-sm sm:text-lg `}
           dangerouslySetInnerHTML={{
-            __html: news?.description?.slice(0, 30),
+            __html: news?.description?.slice(0, 100),
           }}
         ></div>
 

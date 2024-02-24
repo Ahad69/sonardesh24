@@ -23,3 +23,36 @@
     margin-top: 10px;
   }
 }
+.imageContainer {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+  /* Adjust the color and opacity as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* Adjust the text color */
+  z-index: 1;
+  gap: 10px;
+}
+
+
+
+.overlay p {
+  margin: 0;
+}
+
+@media only screen and (max-width:768px) {
+  .containers {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

@@ -28,7 +28,7 @@ export default function Home({ data, latest, others }) {
   const rashi = others?.filter((a) => a?.subCategory == "রাশিফল");
   const entertainment = data?.filter((a) => a?.category == "বিনোদন");
 
-  console.log(national, "home");
+
 
   return (
     <>
