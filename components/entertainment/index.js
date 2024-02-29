@@ -6,7 +6,7 @@ import MiddlePart from "../news/categoryUi/sportsSmall/middlePart";
 
 const Entertainment = ({ news }) => {
 
-  console.log(news);
+
   return (
     <div className={style.container}>
       <div className="flex justify-between items-center">

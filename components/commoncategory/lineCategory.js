@@ -4,7 +4,6 @@ import style from "./commoncategory.module.css";
 import Lines from "../news/categoryUi/lineCat/lines";
 
 const LineCategory = ({ lifestyle, rashi, jobs }) => {
-  console.log(lifestyle);
   return (
     <div className={style.lineContainer}>
       <div>

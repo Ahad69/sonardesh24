@@ -35,6 +35,8 @@ const Details = ({ data }) => {
     window.open(twitterShareURL, "_blank");
   };
 
+  console.log(data);
+
   return (
     <Layout>
       <Head>
@@ -53,9 +55,9 @@ const Details = ({ data }) => {
             {data?.title}
           </h1>
           <br />
-
           <div className="flex flex-col sm:flex-row">
             <img className="w-[50px] mr-5" src="/noimage.gif" />
+
             <div>
               <h1 className="text-md">সোনারদেশ ২৪ ডেস্ক</h1>
               <hr />
@@ -72,7 +74,6 @@ const Details = ({ data }) => {
               </div>
             </div>
           </div>
-
           <br />
           <Image
             width={750}
@@ -82,19 +83,18 @@ const Details = ({ data }) => {
               data?.image ?? "https://d18uevuxerz55l.cloudfront.net/logo.png"
             }
             alt="a"
-          />
+          />{" "}
+          <span className="text-gray-500">{data?.caption}</span>
+          <br />
           <br />
           <h1 className="text-xl sm:p-0 p-2 font-bold"> সোনারদেশ২৪: ডেস্কঃ </h1>
           <br />
-
           <div
             className={` sm:text-lg w-[400px] sm:w-full sm:p-0 p-2`}
-
             dangerouslySetInnerHTML={{
               __html: data?.description,
             }}
           ></div>
-
           <hr className="my-5" />
           <div className="my-10">
             <h1 className="text-2xl font-bold text-center">
