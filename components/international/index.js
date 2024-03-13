@@ -29,7 +29,7 @@ const InternationalSection = ({ news }) => {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4">
-            <NationalLeft news={news?.[0]?.news} />
+            <NationalLeft news={news?.[5]?.news} />
             <NationalLeft news={news?.[6]?.news} />
             <NationalLeft news={news?.[7]?.news} />
             <div className="block sm:hidden">

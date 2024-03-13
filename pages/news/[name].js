@@ -35,8 +35,6 @@ const Details = ({ data }) => {
     window.open(twitterShareURL, "_blank");
   };
 
-  console.log(data);
-
   return (
     <Layout>
       <Head>
