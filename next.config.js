@@ -5,7 +5,7 @@ const nextConfig = {
     domains: [
       "sonardesh24.com",
       "images.pexels.com",
-      "d18uevuxerz55l.cloudfront.net",
+      "d32l2d5ks7wwfj.cloudfront.net",
     ],
   },
 };
