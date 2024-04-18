@@ -31,6 +31,7 @@ const NavDrawer = ({ open, setOpen }) => {
             {" "}
             <Link href={"/"}>সর্বশেষ</Link>{" "}
           </li>
+
           <li>
             <Link href={"/জাতীয়"}>জাতীয়</Link>{" "}
           </li>
@@ -45,6 +46,9 @@ const NavDrawer = ({ open, setOpen }) => {
           <li>
             {" "}
             <Link href={"/অর্থনীতি"}>অর্থনীতি</Link>{" "}
+          </li>
+          <li>
+            <Link href={"/সারাদেশ "}>সারাদেশ</Link>{" "}
           </li>
           <li>
             {" "}
@@ -62,21 +66,15 @@ const NavDrawer = ({ open, setOpen }) => {
             {" "}
             <Link href={"/বিনোদন"}>বিনোদন</Link>
           </li>
-          <li>
-            {" "}
-            <Link href={"/লাইফস্টাইল"}>লাইফস্টাইল</Link>
-          </li>
+
           <li>
             {" "}
             <Link href={"/খেলাধুলা"}>খেলাধুলা</Link>
           </li>
+
           <li>
             {" "}
-            <Link href={"/চাকরি"}>চাকরি</Link>{" "}
-          </li>
-          <li>
-            {" "}
-            <Link href={"/রাশিফল"}>রাশিফল</Link>
+            <Link href={"/অন্যান্য"}>অন্যান্য</Link>
           </li>
         </nav>
       </Drawer>
