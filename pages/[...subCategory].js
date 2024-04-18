@@ -47,13 +47,13 @@ const SubCategory = ({ data, meta }) => {
       </Head>
       <>
         <br />
-        <div className="sm:w-[1200px] m-auto flex justify-between items-start">
+        <div className="sm:w-[1200px] m-auto flex flex-col sm:flex-row justify-between items-start">
           <li className="list-none text-2xl hover:text-blue-400 flex items-center">
             {router.query.subCategory?.[0]}
             <IoIosArrowForward />
             {router.query.subCategory?.[1]}
           </li>
-          <ul className="flex items-center justify-end w-[1000px] flex-wrap">
+          <ul className="flex items-center sm:justify-end justify-between sm:w-[1000px] flex-wrap">
             {subCategory?.map((a) => (
               <Link href={`/${router.query.subCategory?.[0]}/${a?.name}`}>
                 <li className="sm:mx-5 mx-1 text-sm sm:text-base hover:text-blue-400 cursor-pointer">

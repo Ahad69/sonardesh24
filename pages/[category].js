@@ -58,7 +58,7 @@ const Category = ({ data, meta }) => {
             <br />
             <br />
             <br />
-            <MostRead news={data?.slice(11, 20)} />
+            {/*<MostRead news={data?.slice(11, 20)} />*/}
             <br />
             <br />
             <br />
