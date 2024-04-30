@@ -30,8 +30,8 @@ const CommonCategorySection = ({ politics, economics, laws, info }) => {
 
       <div>
         <div className="flex justify-between items-center">
-          <h1 className=" text-white text-2xl bg-green-600 p-2 w-[120px] text-center capitalize">
-            অর্থনৈতিক
+          <h1 className=" text-white text-2xl bg-green-600 p-2 w-[150px] text-center capitalize">
+            অর্থ ও বানিজ্য
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
@@ -54,7 +54,7 @@ const CommonCategorySection = ({ politics, economics, laws, info }) => {
         <br />
         <div className="flex justify-between items-center">
           <h1 className=" text-white text-2xl bg-green-600 p-2 text-center capitalize">
-            আইন আদালত
+            আইন ও অপরাধ
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>

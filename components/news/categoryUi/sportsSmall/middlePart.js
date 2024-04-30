@@ -22,7 +22,7 @@ const MiddlePart = ({ news }) => {
             __html: news?.description?.slice(0, 180),
           }}
         ></div>
-        {news?.description?.length > 200 ? <button>...Read More</button> : ""}
+        <button>...Read More</button>
       </Link>
     </div>
   );

@@ -10,7 +10,7 @@ import Sports from "@/components/sports";
 import LineCategory from "@/components/commoncategory/lineCategory";
 import Entertainment from "@/components/entertainment";
 import Head from "next/head";
-
+import WholeCountry from "@/components/wholecountry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +27,7 @@ export default function Home({ data, latest, others }) {
   const jobs = others?.filter((a) => a?.subCategory == "চাকরি");
   const rashi = others?.filter((a) => a?.subCategory == "রাশিফল");
   const entertainment = data?.filter((a) => a?.category == "বিনোদন");
-
-
+  const wholec = data?.filter((a) => a?.category == "সারাদেশ");
 
   return (
     <>
@@ -61,6 +60,11 @@ export default function Home({ data, latest, others }) {
           <hr />
           <br />
           <br />
+          <WholeCountry news={wholec} />
+          <br />
+          <br /> <hr />
+          <br />
+          <br />
           <CommonCategorySection
             politics={politics}
             economics={economics}
@@ -79,7 +83,6 @@ export default function Home({ data, latest, others }) {
           <br />
           <br />
           <Education news={education} />
-
           <br />
           <br />
           <hr />
@@ -94,7 +97,6 @@ export default function Home({ data, latest, others }) {
           <Entertainment news={entertainment} />
           <br />
           <br />
-
           <br />
           <br />
         </div>

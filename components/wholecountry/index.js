@@ -4,14 +4,14 @@ import style from "./national.module.css";
 import NationalRight from "../news/categoryUi/national/nationalRight";
 import EducationWedge from "../news/categoryUi/educationWedge";
 
-const HomeNationalSection = ({ news }) => {
+const WholeCountry = ({ news }) => {
   return (
     <>
       {" "}
       <div className={style.container}>
         <div className="flex justify-between items-center">
           <h1 className=" text-white text-2xl bg-green-600 p-2 w-[130px]  text-center capitalize">
-            জাতীয়
+            সারাদেশ
           </h1>
           <h1 className="font-bold text-blue-400 text-lg mr-6">সকল খবর </h1>
         </div>
@@ -30,4 +30,4 @@ const HomeNationalSection = ({ news }) => {
   );
 };
 
-export default HomeNationalSection;
+export default WholeCountry;

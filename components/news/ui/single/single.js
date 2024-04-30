@@ -22,7 +22,7 @@ const SingleNews = ({ news }) => {
               __html: news?.description?.slice(0, 170),
             }}
           ></div>
-          {news?.description?.length > 170 ? <button>...Read More</button> : ""}
+          <button>...Read More</button>
         </p>
       </Link>
     </div>

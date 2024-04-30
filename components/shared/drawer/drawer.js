@@ -31,13 +31,8 @@ const NavDrawer = ({ open, setOpen }) => {
             {" "}
             <Link href={"/"}>সর্বশেষ</Link>{" "}
           </li>
-
           <li onClick={onClose}>
             <Link href={"/জাতীয়"}>জাতীয়</Link>{" "}
-          </li>
-          <li onClick={onClose}>
-            {" "}
-            <Link href={"/আন্তর্জাতিক"}>আন্তর্জাতিক</Link>{" "}
           </li>
           <li onClick={onClose}>
             {" "}
@@ -45,33 +40,35 @@ const NavDrawer = ({ open, setOpen }) => {
           </li>
           <li onClick={onClose}>
             {" "}
-            <Link href={"/অর্থনীতি"}>অর্থনীতি</Link>{" "}
+            <Link href={"/অর্থনীতি"}>অর্থ ও বানিজ্য</Link>{" "}
           </li>
           <li onClick={onClose}>
             <Link href={"/সারাদেশ "}>সারাদেশ</Link>{" "}
+          </li>{" "}
+          <li onClick={onClose}>
+            {" "}
+            <Link href={"/আন্তর্জাতিক"}>আন্তর্জাতিক</Link>{" "}
           </li>
           <li onClick={onClose}>
             {" "}
-            <Link href={"/আইন আদালত"}>আইন আদালত</Link>{" "}
+            <Link href={"/আইন আদালত"}>আইন অপরাধ</Link>{" "}
           </li>
           <li onClick={onClose}>
             {" "}
-            <Link href={"/তথ্য প্রযুক্তি"}>তথ্য প্রযুক্তি</Link>{" "}
+            <Link href={"/তথ্য প্রযুক্তি"}>তথ্য ও প্রযুক্তি</Link>{" "}
           </li>
           <li onClick={onClose}>
             {" "}
-            <Link href={"/শিক্ষা"}>শিক্ষা</Link>{" "}
+            <Link href={"/শিক্ষা"}>শিক্ষাঙ্গন</Link>{" "}
           </li>
           <li onClick={onClose}>
             {" "}
             <Link href={"/বিনোদন"}>বিনোদন</Link>
           </li>
-
           <li onClick={onClose}>
             {" "}
             <Link href={"/খেলাধুলা"}>খেলাধুলা</Link>
           </li>
-
           <li onClick={onClose}>
             {" "}
             <Link href={"/অন্যান্য"}>অন্যান্য</Link>
