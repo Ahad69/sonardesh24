@@ -31,7 +31,7 @@ const HomeSecondSection = ({ news }) => {
       </div>
 
       <div className="w-[350px]  m-5 sm:h-[600px]">
-        <Link href={"https://www.facebook.com/sonardesh24/"} target="_blank">
+        <Link href={"https://www.facebook.com/sonardesh/"} target="_blank">
           {" "}
           <div class={style.imageContainer}>
             <img className={style.image} src="/logo.png" />
